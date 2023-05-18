@@ -1,0 +1,35 @@
+{
+	"connection_key": "request",
+	"result": true,
+	"redis_key": "abcdefg",
+	"filepath": "/var/lib/aion/Data/rededge_sdc/abcdef.json",
+	"api_status_code": 200,
+	"runtime_session_id": "boi9ar543dg91ipdnspi099u231280ab0v8af0ew",
+	"business_partner": 101,
+	"service_label": "WORK_CENTER",
+	"api_type": "reads",
+	"WorkCenter": {
+		"WorkCenter": 1,
+		"WorkCenterType": "",
+		"WorkCenterName": "",
+		"BusinessPartner": null,
+		"Plant": "",
+		"WorkCenterCategory": "",
+		"WorkCenterResponsible": "",
+		"SupplyArea": "",
+		"WorkCenterUsage": "",
+		"MatlCompIsMarkedForBackflush": null,
+		"WorkCenterLocation": "",
+		"CapacityInternalID": "",
+		"CapacityCategoryCode": "",
+		"ValidityStartDate": "",
+		"ValidityEndDate": "",
+		"IsMarkedForDeletion": null
+	},
+	"api_schema": "DPFMWorkCenterReads",
+	"accepter": [
+		"General"
+	],
+	"work_center": null,
+	"deleted": false
+}
