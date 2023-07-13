@@ -1,7 +1,7 @@
 # data-platform-api-work-center-reads-rmq-kube
 
-data-platform-api-work-center-reads-rmq-kube は、周辺業務システム を データ連携基盤 と統合することを目的に、API で作業区データを登録するマイクロサービスです。  
-https://xxx.xxx.io/api/API_BILL_OF_MATERIAL_SRV/creates/
+data-platform-api-work-center-reads-rmq-kube は、周辺業務システム を データ連携基盤 と統合することを目的に、API でワークセンタデータを登録するマイクロサービスです。  
+https://xxx.xxx.io/api/API_WORK_CENTER_SRV/reads/
 
 ## 動作環境
 
@@ -18,7 +18,7 @@ APIサービス URL: https://xxx.xxx.io/api/API_WORK_CENTER_SRV/reads/
 ## 本レポジトリ に 含まれる API名
 data-platform-api-work-center-reads-rmq-kube には、次の API をコールするためのリソースが含まれています。  
 
-* A_General（データ連携基盤 作業区 - 一般データ）
+* A_General（データ連携基盤 ワークセンタ - 一般データ）
  
 
 ## API への 値入力条件 の 初期値
@@ -48,8 +48,6 @@ accepter において 下記の例のように、データの種別（＝APIの�
 ```
 	"api_schema": "DPFMWorkCenterReads",
 	"accepter": ["All"],
-	"work_center": null,
-	"deleted": false
 ```
 
 ## 指定されたデータ種別のコール
@@ -58,7 +56,7 @@ accepter における データ種別 の指定に基づいて DPFM_API_Caller �
 caller.go の func() 毎 の 以下の箇所が、指定された API をコールするソースコードです。  
 
 ```
-func (c *DPFMAPICaller) AsyncBillOfMaterialReads(
+func (c *DPFMAPICaller) AsyncReads(
 	accepter []string,
 	input *dpfm_api_input_reader.SDC,
 	output *dpfm_api_output_formatter.SDC,
@@ -77,10 +75,9 @@ func (c *DPFMAPICaller) AsyncBillOfMaterialReads(
 
 ## Output  
 本マイクロサービスでは、[golang-logging-library-for-data-platform](https://github.com/latonaio/golang-logging-library-for-data-platform) により、以下のようなデータがJSON形式で出力されます。  
-以下の sample.json の例は 部品表(BOM) の ヘッダデータ が取得された結果の JSON の例です。  
+以下の sample.json の例は 作業手順 の ヘッダデータ が取得された結果の JSON の例です。  
 以下の項目のうち、"ProductionPlantBusinessPartner" ～ "HeaderIsMarkedForDeletion" は、/DPFM_API_Output_Formatter/type.go 内 の Type Header {} による出力結果です。"cursor" ～ "time"は、golang-logging-library による 定型フォーマットの出力結果です。  
 
 ```
 XXX
 ```
-
