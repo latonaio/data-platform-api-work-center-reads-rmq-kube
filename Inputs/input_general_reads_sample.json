@@ -1,32 +1,48 @@
 {
-"connection_key": "request",
-"result": true,
-"redis_key": "abcdefg",
-"filepath": "/var/lib/aion/Data/rededge_sdc/abcdef.json",
-"api_status_code": 200,
-"runtime_session_id": "boi9ar543dg91ipdnspi099u231280ab0v8af0ew",
-"business_partner": null,
-"service_label": "WORK_CENTER",
-"api_type": "reads",
-"WorkCenter": {
-        "WorkCenter": null,
-        "WorkCenterType": "",
-        "BusinessPartner": null,
-        "Plant": "",
-        "WorkCenterCategory": "",
-        "WorkCenterResponsible": "",
-        "SupplyArea": "",
-        "WorkCenterUsage": "",
-        "ComponentIsMarkedForBackflush": null,
-        "WorkCenterLocation": "",
-        "CapacityID": null,
-        "CapacityCategory": "",
-        "ValidityStartDate": "",
-        "ValidityEndDate": "",
-        "CreationDate": "",
-        "LastChangeDate": "",
-        "IsMarkedForDeletion": null
-    },
-    "api_schema": "DPFMWorkCenterReads",
-    "accepter": ["General"]
+	"connection_key": "request",
+	"result": true,
+	"redis_key": "abcdefg",
+	"filepath": "/var/lib/aion/Data/rededge_sdc/abcdef.json",
+	"api_status_code": 200,
+	"runtime_session_id": "boi9ar543dg91ipdnspi099u231280ab0v8af0ew",
+	"business_partner": null,
+	"service_label": "WORK_CENTER",
+	"api_type": "reads",
+	"WorkCenter": {
+		"WorkCenter": null,
+		"WorkCenterType": "",
+		"BusinessPartner": null,
+		"Plant": "",
+		"WorkCenterCategory": "",
+		"WorkCenterResponsible": "",
+		"SupplyArea": "",
+		"WorkCenterUsage": "",
+		"ComponentIsMarkedForBackflush": null,
+		"WorkCenterLocation": "",
+		"CapacityCategory": "",
+		"CapacityQuantityUnit": "",
+		"CapacityQuantity": null,
+		"ValidityStartDate": "",
+		"ValidityEndDate": "",
+		"CreationDate": "",
+		"LastChangeDate": "",
+		"IsMarkedForDeletion": null,
+		"ProductionCapacity": [
+			{
+				"WorkCenterProductionCapacityID": null,
+				"BusinessPartner": null,
+				"Plant": "",
+				"Product": "",
+				"CapacityFormula": "",
+				"CalculatedCapacityQuantityInProductionUnit": null,
+				"CreationDate": "",
+				"LastChangeDate": "",
+				"IsMarkedForDeletion": null
+			}
+		]
+	},
+	"api_schema": "DPFMWorkCenterReads",
+	"accepter": [
+		"General"
+	]
 }
